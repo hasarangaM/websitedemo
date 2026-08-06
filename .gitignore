@@ -1,0 +1,33 @@
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies (if applicable)
+node_modules/
+vendor/
+
+# Environment
+.env
+
+# Cache
+cache/
+tmp/
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# Database
+*.sql
+
+# Large media (optional)
+*.mp4
+*.mov
