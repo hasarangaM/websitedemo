@@ -27,6 +27,91 @@
     position: relative;
 }
 
+/* Home YouTube Video Banner */
+.home-video-banner {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 82px);
+	min-height: 420px;
+	max-height: 820px;
+	overflow: hidden;
+	background: #0a0f1a;
+}
+.home-video-wrap {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+.home-video-wrap iframe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100vw;
+	height: 56.25vw;
+	min-height: 100%;
+	min-width: 177.78vh;
+	transform: translate(-50%, -50%);
+	border: 0;
+}
+@media only screen and (max-width: 991px) {
+	.home-video-banner {
+		height: 55vh;
+		min-height: 360px;
+		max-height: 560px;
+	}
+}
+@media only screen and (max-width: 575px) {
+	.home-video-banner {
+		height: 45vh;
+		min-height: 260px;
+		max-height: 380px;
+	}
+}
+
+/* Client logo 4x5 grid carousel */
+.client-logo-grid-carousel .client-logo-col {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.client-logo-grid-carousel .ow-client-logo {
+	margin: 0;
+}
+.client-logo-grid-carousel .client-logo {
+	padding: 8px 10px;
+	min-height: 72px;
+}
+.client-logo-grid-carousel.owl-carousel .ow-client-logo img {
+	height: 60px;
+	max-width: 100%;
+	width: auto;
+	object-fit: contain;
+}
+.client-logo-grid-carousel.owl-carousel .owl-stage-outer {
+	padding: 8px 0;
+}
+@media only screen and (max-width: 767px) {
+	.client-logo-grid-carousel .client-logo-col {
+		gap: 10px;
+	}
+	.client-logo-grid-carousel .client-logo {
+		min-height: 60px;
+		padding: 6px 8px;
+	}
+	.client-logo-grid-carousel.owl-carousel .ow-client-logo img {
+		height: 48px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.client-logo-grid-carousel .client-logo-col {
+		gap: 8px;
+	}
+	.client-logo-grid-carousel.owl-carousel .ow-client-logo img {
+		height: 42px;
+	}
+}
+
 /* Header height */
 .site-header .logo-header {
 	height: 82px;
