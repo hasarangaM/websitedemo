@@ -26,6 +26,34 @@
     width: 100%;
     position: relative;
 }
+
+/* Header height */
+.site-header .logo-header {
+	height: 82px;
+}
+.site-header .header-nav .nav > li > a {
+	padding-top: 30px;
+	padding-bottom: 29px;
+}
+.site-header .extra-nav {
+	padding: 20px 0 17px 0;
+}
+.site-header .navbar-toggler {
+	margin: 28px 0 20px 15px;
+}
+@media only screen and (max-width: 767px) {
+	.site-header .logo-header,
+	.site-header .is-fixed .logo-header,
+	.site-header .is-fixed.header-curve .logo-header {
+		height: 60px;
+	}
+	.site-header .navbar-toggler {
+		margin: 18px 0 14px 15px;
+	}
+	.site-header .extra-nav {
+		padding: 12px 0 10px 0;
+	}
+}
 .mega-menu a span.badge {
     background: #ff0505;
     color: #fff;
