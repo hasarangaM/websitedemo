@@ -393,6 +393,224 @@
 	}
 }
 
+/* Our Vision section */
+.vision-section {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #f6f7f9;
+	background-image: url(../images/background/bg-video.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.vision-section:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, rgba(246, 247, 249, 0.96) 0%, rgba(246, 247, 249, 0.88) 55%, rgba(246, 247, 249, 0.78) 100%);
+	pointer-events: none;
+}
+.vision-section > .container {
+	position: relative;
+	z-index: 1;
+}
+.vision-eyebrow {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #050f2d;
+	background: rgba(215, 223, 33, 0.25);
+	padding: 6px 12px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+}
+.vision-title {
+	font-size: 42px;
+	line-height: 1.15;
+	font-weight: 800;
+	color: #111;
+	margin: 0 0 18px;
+	letter-spacing: 0.5px;
+	position: relative;
+}
+.vision-title:after {
+	content: "";
+	display: block;
+	width: 64px;
+	height: 4px;
+	background: #d7df21;
+	margin-top: 16px;
+	border-radius: 2px;
+}
+.vision-lead {
+	font-size: 20px;
+	line-height: 1.5;
+	font-weight: 600;
+	color: #222;
+	margin-bottom: 18px;
+}
+.vision-text {
+	font-size: 16px;
+	line-height: 1.8;
+	color: #666;
+	margin: 0;
+}
+.vision-media {
+	position: relative;
+	padding: 0 20px 50px 0;
+}
+.vision-media-frame {
+	position: relative;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 20px 50px rgba(5, 15, 45, 0.18);
+}
+.vision-media-frame img {
+	display: block;
+	width: 100%;
+	height: 420px;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+}
+.vision-media-frame:hover img {
+	transform: scale(1.04);
+}
+.vision-play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 78px;
+	height: 78px;
+	border-radius: 50%;
+	background: #050f2d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 0 10px rgba(215, 223, 33, 0.35);
+	transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.vision-play-btn span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.vision-play-btn i {
+	color: #fff;
+	font-size: 22px;
+	margin-left: 3px;
+}
+.vision-play-btn:hover {
+	background: #0b1b45;
+	transform: translate(-50%, -50%) scale(1.08);
+	box-shadow: 0 0 0 14px rgba(215, 223, 33, 0.45);
+}
+.vision-usp-card {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 78%;
+	max-width: 420px;
+	background: #fff;
+	border-radius: 14px;
+	padding: 28px 28px 24px;
+	box-shadow: 0 16px 40px rgba(5, 15, 45, 0.16);
+	border-top: 4px solid #d7df21;
+	z-index: 3;
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.vision-usp-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 22px 48px rgba(5, 15, 45, 0.22);
+}
+.vision-usp-title {
+	font-size: 22px;
+	font-weight: 800;
+	color: #111;
+	margin: 0 0 16px;
+	letter-spacing: 0.5px;
+}
+.vision-usp-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.vision-usp-list li {
+	position: relative;
+	padding-left: 28px;
+	margin-bottom: 14px;
+	font-size: 15px;
+	line-height: 1.55;
+	color: #444;
+	font-weight: 500;
+}
+.vision-usp-list li:last-child {
+	margin-bottom: 0;
+}
+.vision-usp-list li:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 7px;
+	width: 12px;
+	height: 12px;
+	border-radius: 3px;
+	background: #d7df21;
+	box-shadow: inset 0 0 0 2px rgba(5, 15, 45, 0.08);
+}
+@media only screen and (max-width: 991px) {
+	.vision-section {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.vision-title {
+		font-size: 34px;
+	}
+	.vision-lead {
+		font-size: 18px;
+	}
+	.vision-media-frame img {
+		height: 340px;
+	}
+	.vision-usp-card {
+		width: 88%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.vision-section {
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+	.vision-title {
+		font-size: 30px;
+	}
+	.vision-media {
+		padding: 0 0 20px;
+	}
+	.vision-media-frame img {
+		height: 260px;
+	}
+	.vision-play-btn {
+		width: 64px;
+		height: 64px;
+		box-shadow: 0 0 0 8px rgba(215, 223, 33, 0.35);
+	}
+	.vision-usp-card {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		width: 100%;
+		max-width: none;
+		margin-top: -28px;
+	}
+}
+
 /* Header height */
 .site-header .logo-header {
 	height: 82px;
