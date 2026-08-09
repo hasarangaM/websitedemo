@@ -135,6 +135,34 @@ var Industry = function(){
 
 			fixedContentPos: false
 		});
+
+		/* Featured MP4 video modal */
+		jQuery('.featured-video-popup').magnificPopup({
+			type: 'inline',
+			mainClass: 'mfp-fade featured-video-mfp',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: true,
+			callbacks: {
+				open: function () {
+					var video = this.content.find('video').get(0);
+					if (video) {
+						video.currentTime = 0;
+						var playPromise = video.play();
+						if (playPromise && typeof playPromise.catch === 'function') {
+							playPromise.catch(function () {});
+						}
+					}
+				},
+				close: function () {
+					var video = this.content.find('video').get(0);
+					if (video) {
+						video.pause();
+						video.currentTime = 0;
+					}
+				}
+			}
+		});
 	}
 	
 	/* Scroll To Top ============ */

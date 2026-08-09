@@ -9180,7 +9180,7 @@ ul[class*="list-"]{
     -webkit-transition: all 0.8s;
 }
 .ow-client-logo:hover{
-	box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 0 100px 0 rgba(0,0,0,0.2);
 }
 .client-logo-carousel  .owl-stage-outer{
 	padding: 10px 0;
@@ -11352,13 +11352,13 @@ footer .widget_services ul li {
 }
 /*widget Getintuch*/
 .footer-top {
-    background: #1C1C1C;
+    background: #050F2D;
     background-size: cover;
     background-position: center;
     padding: 80px 0 20px;
 }
 .footer-bottom {
-    background-color:#1C1C1C;
+    background-color:#050F2D;
     padding: 25px 0;
     color: #b0b0b0;
     font-size: 14px;
