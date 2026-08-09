@@ -275,6 +275,124 @@
 	}
 }
 
+/* Contact highlight cards */
+.contact-highlights-section {
+	padding-top: 70px;
+	padding-bottom: 40px;
+}
+.contact-highlight-card {
+	background: #050f2d;
+	border-radius: 14px;
+	padding: 40px 28px 36px;
+	text-align: center;
+	height: 100%;
+	min-height: 320px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 12px 30px rgba(5, 15, 45, 0.18);
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.contact-highlight-card:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(160deg, rgba(215, 223, 33, 0.12) 0%, transparent 45%);
+	opacity: 0;
+	transition: opacity 0.35s ease;
+	pointer-events: none;
+}
+.contact-highlight-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 18px 40px rgba(5, 15, 45, 0.28);
+}
+.contact-highlight-card:hover:before {
+	opacity: 1;
+}
+.contact-highlight-icon {
+	width: 88px;
+	height: 88px;
+	margin: 0 auto 22px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(215, 223, 33, 0.35);
+	transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+}
+.contact-highlight-icon i {
+	font-size: 42px;
+	line-height: 1;
+	color: #d7df21;
+	transition: transform 0.35s ease;
+}
+.contact-highlight-card:hover .contact-highlight-icon {
+	background: rgba(215, 223, 33, 0.12);
+	border-color: #d7df21;
+	transform: scale(1.06);
+}
+.contact-highlight-card:hover .contact-highlight-icon i {
+	transform: scale(1.08);
+}
+.contact-highlight-title {
+	color: #fff;
+	font-size: 22px;
+	line-height: 1.35;
+	font-weight: 700;
+	margin: 0 0 16px;
+}
+.contact-highlight-text {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 15px;
+	line-height: 1.7;
+	margin: 0;
+}
+.contact-highlight-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.contact-highlight-list li {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 14px;
+	line-height: 1.65;
+	margin-bottom: 8px;
+}
+.contact-highlight-list li:last-child {
+	margin-bottom: 0;
+}
+.contact-highlight-card a,
+.contact-highlight-accent {
+	color: #d7df21;
+	font-weight: 600;
+	text-decoration: none;
+	transition: color 0.25s ease;
+}
+.contact-highlight-card a:hover {
+	color: #eef36a;
+	text-decoration: underline;
+}
+@media only screen and (max-width: 991px) {
+	.contact-highlight-card {
+		min-height: 280px;
+		padding: 34px 22px 30px;
+	}
+	.contact-highlight-title {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.contact-highlights-section {
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+	.contact-highlight-card {
+		min-height: 0;
+		margin-bottom: 20px;
+	}
+}
+
 /* Header height */
 .site-header .logo-header {
 	height: 82px;
