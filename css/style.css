@@ -3419,7 +3419,7 @@ blockquote:before {
 	}
 	.logo-header img, 
 	.logo-footer img{
-		width: 140px;
+		width: 60px;
 	}
 	.logo-header{
 		width: 140px;
@@ -14597,4 +14597,10 @@ input[type="radio"] + label:hover:before{
     position: relative;
     z-index: 9;
     border-left: 1px solid rgba(0,0,0,0.1);	
+}
+@media only screen and (max-width: 480px) {
+    .inq-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
 }
