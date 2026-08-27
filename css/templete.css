@@ -1,4 +1,4 @@
- 
+﻿ 
 /*==========================
 	Custom css
 ==========================*/
@@ -9523,4 +9523,557 @@ button.scroltop {
 	.dlab-post-media iframe {
         height: 250px;
     }
+}
+/* ===== Mission Infographic (Mission & Credo) ===== */
+.mission-infographic-section {
+	background: linear-gradient(165deg, #f4f6f9 0%, #eef1f6 45%, #f7f8fb 100%);
+	position: relative;
+	overflow: hidden;
+}
+.mission-infographic-section:before {
+	content: "";
+	position: absolute;
+	width: 420px;
+	height: 420px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(0, 188, 212, 0.08) 0%, transparent 70%);
+	top: -80px;
+	left: -100px;
+	pointer-events: none;
+}
+.mission-infographic-section:after {
+	content: "";
+	position: absolute;
+	width: 360px;
+	height: 360px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(255, 112, 67, 0.07) 0%, transparent 70%);
+	bottom: -60px;
+	right: -80px;
+	pointer-events: none;
+}
+.mission-infographic {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	position: relative;
+	z-index: 1;
+	min-height: 480px;
+	padding: 20px 0;
+}
+.mission-hub {
+	flex: 0 0 280px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+}
+.mission-hub-ring {
+	width: 260px;
+	height: 260px;
+	border-radius: 50%;
+	padding: 10px;
+	background: conic-gradient(
+		from 320deg,
+		#4dd0e1 0deg 70deg,
+		#ef5350 70deg 150deg,
+		#ffa726 150deg 230deg,
+		#e8ecf1 230deg 360deg
+	);
+	box-shadow: 0 18px 40px rgba(30, 41, 59, 0.12);
+	animation: missionHubPulse 4s ease-in-out infinite;
+}
+.mission-hub-core {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+.mission-hub-core span {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 28px;
+	font-weight: 800;
+	line-height: 1.2;
+	letter-spacing: 1px;
+	color: #2d3748;
+	text-transform: uppercase;
+}
+.mission-items {
+	flex: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	padding-left: 90px;
+	min-width: 0;
+}
+.mission-connectors {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 90px;
+	height: 100%;
+	max-height: 420px;
+	pointer-events: none;
+	overflow: visible;
+}
+.mission-connectors path {
+	fill: none;
+	stroke: #c5ccd6;
+	stroke-width: 1.5;
+	stroke-linecap: round;
+}
+.mission-item {
+	display: flex;
+	align-items: stretch;
+	position: relative;
+	z-index: 1;
+	transition: transform 0.35s ease;
+}
+.mission-item:hover {
+	transform: translateX(6px);
+}
+.mission-item-icon {
+	flex: 0 0 78px;
+	width: 78px;
+	margin-right: -18px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+}
+.mission-item-icon span {
+	width: 78px;
+	height: 78px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	box-shadow: 0 10px 24px rgba(30, 41, 59, 0.12);
+	position: relative;
+}
+.mission-item-icon span:before {
+	content: "";
+	position: absolute;
+	inset: -4px;
+	border-radius: 50%;
+	padding: 4px;
+	background: var(--mission-accent);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+}
+.mission-item-icon i {
+	font-size: 28px;
+	position: relative;
+	z-index: 1;
+	color: var(--mission-color);
+}
+.mission-item-card {
+	flex: 1;
+	display: flex;
+	min-width: 0;
+	background: #fff;
+	border-radius: 999px;
+	box-shadow: 0 12px 30px rgba(30, 41, 59, 0.1);
+	overflow: hidden;
+	min-height: 92px;
+}
+.mission-item-label {
+	flex: 0 0 140px;
+	background: var(--mission-accent);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 14px 12px 14px 26px;
+	position: relative;
+}
+.mission-item-num {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	color: #94a3b8;
+	letter-spacing: 0.5px;
+	line-height: 1;
+	display: block;
+	margin-bottom: 6px;
+}
+.mission-item-label strong {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+.mission-item-body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 16px 28px 16px 22px;
+	min-width: 0;
+}
+.mission-item-body p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.65;
+	color: #4a5568;
+}
+.mission-item--mission {
+	--mission-accent: linear-gradient(135deg, #4dd0e1 0%, #26c6da 50%, #00acc1 100%);
+	--mission-color: #00acc1;
+}
+.mission-item--strategy {
+	--mission-accent: linear-gradient(135deg, #ef5350 0%, #e53935 50%, #c62828 100%);
+	--mission-color: #e53935;
+}
+.mission-item--value {
+	--mission-accent: linear-gradient(135deg, #ffb74d 0%, #ffa726 50%, #fb8c00 100%);
+	--mission-color: #fb8c00;
+}
+@keyframes missionHubPulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.02); }
+}
+
+@media only screen and (max-width: 1199px) {
+	.mission-hub {
+		flex: 0 0 220px;
+	}
+	.mission-hub-ring {
+		width: 210px;
+		height: 210px;
+	}
+	.mission-hub-core span {
+		font-size: 22px;
+	}
+	.mission-items {
+		padding-left: 70px;
+	}
+	.mission-connectors {
+		width: 70px;
+	}
+	.mission-item-label {
+		flex: 0 0 110px;
+		padding-left: 22px;
+	}
+	.mission-item-label strong {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.mission-infographic {
+		flex-direction: column;
+		gap: 40px;
+		min-height: 0;
+		padding: 10px 0;
+	}
+	.mission-hub {
+		flex: none;
+	}
+	.mission-hub-ring {
+		width: 200px;
+		height: 200px;
+	}
+	.mission-items {
+		width: 100%;
+		padding-left: 0;
+		gap: 22px;
+	}
+	.mission-connectors {
+		display: none;
+	}
+	.mission-item-card {
+		border-radius: 28px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.mission-hub-ring {
+		width: 170px;
+		height: 170px;
+		padding: 8px;
+	}
+	.mission-hub-core span {
+		font-size: 18px;
+	}
+	.mission-item {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.mission-item:hover {
+		transform: translateY(-4px);
+	}
+	.mission-item-icon {
+		margin: 0 0 -20px 18px;
+	}
+	.mission-item-icon span {
+		width: 64px;
+		height: 64px;
+	}
+	.mission-item-icon i {
+		font-size: 22px;
+	}
+	.mission-item-card {
+		width: 100%;
+		flex-direction: column;
+		border-radius: 22px;
+		min-height: 0;
+	}
+	.mission-item-label {
+		flex: none;
+		width: 100%;
+		justify-content: flex-start;
+		padding: 28px 18px 12px 18px;
+		border-radius: 22px 22px 0 0;
+	}
+	.mission-item-num {
+		margin-bottom: 6px;
+	}
+	.mission-item-body {
+		padding: 14px 18px 18px;
+	}
+	.mission-item-body p {
+		font-size: 13px;
+	}
+}
+
+/* ===== Credo Section (Mission & Credo) ===== */
+.credo-section {
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.credo-section:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at 0% 10%, rgba(0, 172, 193, 0.06), transparent 35%),
+		radial-gradient(circle at 100% 80%, rgba(229, 57, 53, 0.05), transparent 40%);
+	pointer-events: none;
+}
+.credo-head {
+	max-width: 720px;
+	margin: 0 auto 55px;
+	position: relative;
+	z-index: 1;
+}
+.credo-eyebrow {
+	display: inline-block;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	color: var(--primary, #1e3a8a);
+	margin-bottom: 12px;
+}
+.credo-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 42px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	color: #1a202c;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+}
+.credo-intro {
+	font-size: 16px;
+	line-height: 1.8;
+	color: #4a5568;
+	margin: 0;
+}
+.credo-list {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	position: relative;
+	z-index: 1;
+}
+.credo-item {
+	display: grid;
+	grid-template-columns: 1.05fr 1fr;
+	align-items: stretch;
+	min-height: 280px;
+	background: #f7f9fc;
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 14px 36px rgba(26, 32, 44, 0.08);
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.credo-item:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 22px 48px rgba(26, 32, 44, 0.14);
+}
+.credo-item--reverse {
+	grid-template-columns: 1fr 1.05fr;
+}
+.credo-item--reverse .credo-media {
+	order: 2;
+}
+.credo-item--reverse .credo-content {
+	order: 1;
+}
+.credo-media {
+	position: relative;
+	overflow: hidden;
+	min-height: 260px;
+}
+.credo-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.7s ease;
+}
+.credo-item:hover .credo-media img {
+	transform: scale(1.08);
+}
+.credo-media:after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, transparent 45%, rgba(15, 23, 42, 0.35) 100%);
+	pointer-events: none;
+}
+.credo-media-badge {
+	position: absolute;
+	left: 18px;
+	bottom: 18px;
+	z-index: 2;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.95);
+	color: #1a202c;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 800;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+.credo-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 42px 48px;
+	position: relative;
+}
+.credo-icon {
+	width: 54px;
+	height: 54px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, var(--primary, #1e3a8a), #0ea5e9);
+	color: #fff;
+	font-size: 22px;
+	margin-bottom: 18px;
+	box-shadow: 0 10px 22px rgba(14, 165, 233, 0.28);
+}
+.credo-content h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 26px;
+	font-weight: 800;
+	letter-spacing: 1.5px;
+	color: #1a202c;
+	margin: 0 0 14px;
+	text-transform: uppercase;
+}
+.credo-content p {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.75;
+	color: #4a5568;
+	max-width: 460px;
+}
+.credo-item:nth-child(1) .credo-icon { background: linear-gradient(135deg, #00acc1, #26c6da); }
+.credo-item:nth-child(2) .credo-icon { background: linear-gradient(135deg, #fb8c00, #ffb74d); }
+.credo-item:nth-child(3) .credo-icon { background: linear-gradient(135deg, #3949ab, #5c6bc0); }
+.credo-item:nth-child(4) .credo-icon { background: linear-gradient(135deg, #8e24aa, #ab47bc); }
+.credo-item:nth-child(5) .credo-icon { background: linear-gradient(135deg, #e53935, #ef5350); }
+.credo-item:nth-child(6) .credo-icon { background: linear-gradient(135deg, #00897b, #26a69a); }
+.credo-item:nth-child(7) .credo-icon { background: linear-gradient(135deg, #f9a825, #fdd835); color: #1a202c; }
+.credo-item:nth-child(8) .credo-icon { background: linear-gradient(135deg, #c2185b, #ec407a); }
+
+@media only screen and (max-width: 991px) {
+	.credo-title {
+		font-size: 34px;
+	}
+	.credo-item,
+	.credo-item--reverse {
+		grid-template-columns: 1fr;
+	}
+	.credo-item--reverse .credo-media,
+	.credo-item--reverse .credo-content {
+		order: initial;
+	}
+	.credo-media {
+		min-height: 220px;
+		max-height: 260px;
+	}
+	.credo-content {
+		padding: 28px 28px 32px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.credo-head {
+		margin-bottom: 36px;
+	}
+	.credo-title {
+		font-size: 28px;
+		letter-spacing: 2px;
+	}
+	.credo-intro {
+		font-size: 14px;
+	}
+	.credo-list {
+		gap: 22px;
+	}
+	.credo-item {
+		border-radius: 18px;
+		min-height: 0;
+	}
+	.credo-media {
+		min-height: 190px;
+		max-height: 210px;
+	}
+	.credo-media-badge {
+		width: 44px;
+		height: 44px;
+		font-size: 13px;
+		left: 14px;
+		bottom: 14px;
+	}
+	.credo-content {
+		padding: 22px 20px 24px;
+	}
+	.credo-icon {
+		width: 46px;
+		height: 46px;
+		font-size: 18px;
+		border-radius: 14px;
+		margin-bottom: 14px;
+	}
+	.credo-content h3 {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.credo-content p {
+		font-size: 14px;
+	}
 }
